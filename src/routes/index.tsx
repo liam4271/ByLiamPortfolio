@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
         name: "description",
         content: "Editorial travel films and photography for remarkable hotels, destinations, restaurants, and lifestyle brands.",
       },
-      { property: "og:title", content: "Avery Vale — Travel Storyteller & UGC Creator" },
+      { property: "og:title", content: "By Liam — Travel Storyteller & UGC Creator" },
       {
         property: "og:description",
         content: "Editorial travel films and photography for remarkable places and thoughtful brands.",
