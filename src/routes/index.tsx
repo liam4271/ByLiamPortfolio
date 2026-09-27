@@ -8,7 +8,7 @@ import { portfolio } from "@/content/portfolio";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "By Liam — Travel Storyteller & UGC Creator" },
+      { title: "B Liam — Travel Storyteller & UGC Creator" },
       {
         name: "description",
         content: "Editorial travel films and photography for remarkable hotels, destinations, restaurants, and lifestyle brands.",
