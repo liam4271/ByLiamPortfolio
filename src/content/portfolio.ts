@@ -7,12 +7,17 @@ import foodFilm from "@/assets/project-food.jpg";
 import hotelFilm from "@/assets/project-hotel.jpg";
 import lifestyleFilm from "@/assets/project-lifestyle.jpg";
 
-import pizza from "@/assets/pizza.mp4";
+
+import kolonada from "@/assets/Hidden-gem-kolonada.mp4";
+import hotelMiramare from "@/assets/Life style _ voice over _ text .mp4"
 import alletto from "@/assets/alletto.mp4";
 import tarot from "@/assets/tarot.mp4";
 import rome from "@/assets/Rome.mp4";
 import spaDuLac from "@/assets/spaDuLac.mp4"
 
+
+import HotelMiramare from "@/assets/HotelMiramare1.jpeg";
+import foodKolonada from "@/assets/FoodKolonada.jpeg";
 import florence from "@/assets/florence.webp";
 import forest from "@/assets/forest.webp";
 import mole from "@/assets/mole.webp";
@@ -82,6 +87,17 @@ export const portfolio = {
   },
   projects: [
     {
+    name: "Hotel Miramare",
+    location: "Zadar, Croatia",
+    type: "Hotel · Lifestyle & Aesthetic Content",
+    description: "A visual content collection capturing the atmosphere and experience of Hotel Miramare through two edited lifestyle and aesthetic shorts, combining immersive B-roll footage with 10 photographs to showcase the hotel’s setting, ambiance, and unique character.",
+    media: hotelMiramare,
+    mediaAlt: "Lifestyle and aesthetic video content capturing the atmosphere, details, and guest experience at Hotel Miramare.",
+    format: "phone" as const,
+    mediaType: "video" as const,
+    deliverables: "2 edited shorts · 10 photographs",
+    },
+    {
       name: "All'Etto",
       location: "Otrante, Italy",
       type: "Restaurant · Short-form film",
@@ -103,16 +119,16 @@ export const portfolio = {
       mediaType: "video" as const,
       deliverables: "1 Short-form film",
     },
-    {
-      name: "Pizza in trevi",
-      location: "Rome, Italy",
-      type: "Restaurant · Social story",
-      description: "A set of three short-form Story videos created to communicate the restaurant’s opening hours in a simple, clear and visually engaging way.",
-      media: pizza,
-      mediaAlt: "A short visual story focused on the experience rather than the destination. Pizza in Trevi",
-      format: "phone" as const,
-      mediaType: "video" as const,
-      deliverables: "3 instagram story",
+  {
+    name: "Kolonada",
+    location: "Zadar, Croatia",
+    type: "Restaurant · Short-form video & Photography",
+    description: "A visual content collection capturing the atmosphere, dishes, and details of Kolonada through an edited short, 20 photographs and B-rolls, designed to showcase the restaurant’s identity and dining experience.",
+    media: kolonada,
+    mediaAlt: "B-roll short capturing the atmosphere, food, and dining experience at Kolonada restaurant in Zadar, Croatia.",
+    format: "phone" as const,
+    mediaType: "video" as const,
+    deliverables: "1 B-roll short · 20 photographs",
     },
     {
       name: "Spa du Lac",
@@ -148,8 +164,8 @@ export const portfolio = {
         { media: mole, alt: "Mole di Narni, Italy" },
          { media: sydney, alt: "Bondi to Bronte, Australia" },
         { media: statut, alt: "Statue of Liberty, America" },
-        { media: rinjani, alt: "Mount Rinjani, Indonesia" },
-        { media: sunset, alt: "Sunset over the landscape" },
+        { media: HotelMiramare, alt: "Hotel Photograph, Croatia" },
+        { media: foodKolonada, alt: "Dining Experience, Kolonada" },
 
   
       ],
