@@ -30,7 +30,9 @@ const navItems = [
   ["Services", "#services"],
   ["Selected work", "#work"],
   ["Photos", "#photos"],
+  ["Reviews", "#reviews"],
   ["Process", "#process"],
+  
 ];
 const galleryLayout = [
   { span: "col-span-2 md:col-span-7", frame: "aspect-[16/10]" },
@@ -43,6 +45,8 @@ const galleryLayout = [
   { span: "col-span-1 md:col-span-4", frame: "aspect-square md:aspect-[4/5]" },
 
 ];
+const initials = (name: string) =>
+  name.split(/\s+/).slice(0, 2).map((part) => part.charAt(0)).join("").toUpperCase();
 
 function PhoneFrame({
   src,
@@ -149,7 +153,7 @@ function PortfolioPage() {
           </div>
         </div>
       </section>
-
+{/*
       <section id="services" className="section-pad bg-ink text-paper">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
           <div className="section-heading text-paper"><p className="eyebrow text-blush">Ways to work together</p><h2 className="section-title mt-4">Stories made for how people travel now.</h2></div>
@@ -172,7 +176,7 @@ function PortfolioPage() {
           </div>
         </div>
       </section>
-
+*/}
       <section id="work" className="section-pad bg-paper">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
           <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
@@ -268,6 +272,32 @@ function PortfolioPage() {
           </div>
         </div>
       </section>
+            <section id="reviews" className="section-pad bg-background">
+        <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
+          <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-end">
+            <div>
+              <p className="eyebrow text-primary">{portfolio.reviews.eyebrow}</p>
+              <h2 className="section-title mt-4 whitespace-pre-line">{portfolio.reviews.title}</h2>
+            </div>
+            <p className="max-w-sm text-sm leading-6 text-muted-foreground">{portfolio.reviews.note}</p>
+          </div>
+          <div className={`review-grid mt-16 ${portfolio.reviews.items.length >= 3 ? "md:grid-cols-2 lg:grid-cols-3" : portfolio.reviews.items.length === 2 ? "md:grid-cols-2" : "md:grid-cols-1"}`}>
+            {portfolio.reviews.items.map((review) => (
+              <article className="review-card" key={`${review.name}-${review.place}`}>
+                <span aria-hidden="true" className="review-mark">{"“"}</span>
+                <p className="review-quote">{review.quote}</p>
+                <footer className="review-meta">
+                  <span aria-hidden="true" className="review-avatar">{initials(review.name)}</span>
+                  <div>
+                    <p className="review-name">{review.name}</p>
+                    <p className="review-role">{review.role} · {review.place}</p>
+                  </div>
+                </footer>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section id="process" className="section-pad bg-blush">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
@@ -281,17 +311,7 @@ function PortfolioPage() {
         </div>
       </section>
 
-      <section className="section-pad overflow-hidden bg-paper" aria-labelledby="statement-title">
-        <div className="mx-auto grid max-w-[1500px] items-center gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20 lg:px-12">
-          <div>
-            <p className="eyebrow text-primary">{portfolio.statement.eyebrow}</p>
-            <h2 className="section-title mt-4 uppercase" id="statement-title">{portfolio.statement.title}</h2>
-            <p className="mt-8 max-w-md text-base leading-7 text-foreground/70 sm:text-lg sm:leading-8">{portfolio.statement.body}</p>
-          </div>
-          
-        </div>
-      </section>
-
+     
       <footer id="contact" className="section-pad bg-primary text-paper">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12">
           <p className="eyebrow text-blush">A new story starts here</p>

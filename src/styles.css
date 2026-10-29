@@ -198,6 +198,16 @@
 @utility process-step { @apply min-h-72 border-b border-r border-ink/15 p-6 lg:p-7; }
 @utility contact-form { @apply grid gap-7; }
 
+
+@utility review-grid { @apply grid gap-6 md:gap-8; }
+@utility review-card { @apply flex flex-col border border-border bg-card p-6 transition-colors duration-300 hover:border-primary sm:p-8; }
+@utility review-mark { @apply font-display text-5xl leading-[.55] text-primary; }
+@utility review-quote { @apply mt-6 pb-8 font-display text-lg font-bold leading-[1.4] sm:text-xl sm:leading-[1.4]; }
+@utility review-meta { @apply mt-auto flex items-center gap-4 border-t border-border pt-5; }
+@utility review-avatar { @apply grid size-11 shrink-0 place-items-center rounded-full bg-blush font-display text-[11px] font-bold text-ink; }
+@utility review-name { @apply text-[11px] font-semibold uppercase tracking-[0.15em]; }
+@utility review-role { @apply mt-1 text-xs leading-5 text-muted-foreground; }
+
 .contact-form label { font-size: .625rem; font-weight: 600; text-transform: uppercase; letter-spacing: .15em; }
 .contact-form input, .contact-form textarea { margin-top: .5rem; width: 100%; border: 0; border-bottom: 1px solid color-mix(in oklab, var(--paper) 35%, transparent); background: transparent; padding: .65rem 0; color: var(--paper); outline: none; font-size: .9rem; letter-spacing: 0; text-transform: none; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--paper); }

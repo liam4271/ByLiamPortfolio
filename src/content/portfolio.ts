@@ -61,21 +61,21 @@ export const portfolio = {
     {
       number: "01",
       name: "Essential",
-      price: "€180",
+      price: "€120",
       description: "1 UGC vertical video · 5 lifestyle photos · Concept & script · Editing included · Instagram & TikTok format",
       position: "For a focused content piece",
     },
     {
       number: "02",
       name: "Experience",
-      price: "€280",
+      price: "€220",
       description: "2 UGC vertical videos · 10 lifestyle photos · 2 concepts & scripts · Immersive experience shots · Editing included",
       position: "For a complete experience",
     },
     {
       number: "03",
       name: "Signature",
-      price: "€500",
+      price: "€400",
       description: "4 UGC vertical videos · 15 lifestyle photos · 4 concepts & scripts · Mixed cinematic & UGC content · Raw footage included",
       position: "For a full content library",
     },
@@ -170,6 +170,28 @@ export const portfolio = {
   
       ],
     },
+      reviews: {
+    eyebrow: "Reviews",
+    title: "What they said\nafter the shoot.",
+    note: "A few words from the people who invited us in — kept here because they say it better than we can.",
+    // Add as many entries as you like: two fit side by side, three or more flow automatically.
+    items: [
+      {
+        quote:
+          "Thank you for visiting us and presenting us your amazing work. Love the way you captured those little special details of our boutique hotel in your photos and videos. We really enjoy watching and posting them. ",
+        name: "Ankica",
+        role: "Manager",
+        place: "Almayer Art & Heritage · Zadar",
+      },
+      {
+        quote:
+          "I have reviewed the materials personaly. You and your partner delivered exactly what we had envisioned and discussed during our meeting, providing us with plenty of high quality content to start planning and building our profile. I was particularly happy with the restaurant content, which turned out great. I would definitely recommend your services to any hotel or restaurant, as you clearly understood what I was looking for and did an excellent job bringing these ideas to life.",
+        name: "Vid Višnjić",
+        role: "Marketing manager",
+        place: "Miramare · Croatia",
+      },
+    ],
+  },
   process: [
     ["01", "Discovery", "We clarify the audience, objectives, channels, and what the place should make people feel."],
     ["02", "Creative direction", "I shape the concept, visual language, story beats, and practical production plan."],
